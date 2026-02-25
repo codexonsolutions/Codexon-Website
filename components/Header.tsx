@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -32,30 +31,26 @@ export default function Header() {
             "0 4px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255,255,255,0.04) inset",
         }}
       >
-        {/* logo */}
-        <Link href="/" className="flex items-center shrink-0">
-          <Image
-            src="/Codexon-Logo.svg"
-            alt="Codexon"
-            width={38}
-            height={38}
-            priority
-          />
+        {/* logo text */}
+        <Link
+          href="/"
+          className="flex items-center shrink-0 text-white text-3xl font-semibold tracking-wide"
+        >
+          Codexon
         </Link>
 
         {/* desktop nav */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="px-4 py-1.5 text-sm font-medium tracking-wide rounded-full transition-colors duration-200 whitespace-nowrap"
-                style={{ color: "var(--color-text-muted)" }}
+                className="px-4 py-1.5 text-base font-semibold tracking-wide rounded-full transition-colors duration-200 whitespace-nowrap text-white"
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "var(--color-text-primary)")
+                  (e.currentTarget.style.color = "#e6e6e6")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "var(--color-text-muted)")
+                  (e.currentTarget.style.color = "#ffffff")
                 }
               >
                 {link.label}
@@ -110,13 +105,12 @@ export default function Header() {
               <Link
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="block px-4 py-2 text-sm font-medium rounded-xl transition-colors duration-150"
-                style={{ color: "var(--color-text-muted)" }}
+                className="block px-4 py-2 text-base font-semibold rounded-xl transition-colors duration-150 text-white"
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "var(--color-text-primary)")
+                  (e.currentTarget.style.color = "#e6e6e6")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "var(--color-text-muted)")
+                  (e.currentTarget.style.color = "#ffffff")
                 }
               >
                 {link.label}

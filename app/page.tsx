@@ -1,9 +1,10 @@
-
+import Featured from "@/components/home/Featured";
 
 export default function Home() {
   return (
-    <div>
-      
-    </div>
+    <main>
+      <Featured />
+    </main>
   );
 }
+
