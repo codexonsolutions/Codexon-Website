@@ -14,15 +14,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      className="fixed z-50 left-1/2 -translate-x-1/2"
-      style={{ top: "60px", width: "40%" }}
-    >
+    <header className="fixed left-1/2 top-6 z-50 w-[92%] -translate-x-1/2 md:top-[60px] md:w-[40%]">
       {/* pill container */}
       <nav
-        className="flex items-center justify-between w-full rounded-full"
+        className="flex w-full items-center justify-between rounded-full"
         style={{
-          padding: "16px 28px",
+          padding: "12px 18px",
           background: "rgba(20, 20, 28, 0.85)",
           backdropFilter: "blur(16px)",
           WebkitBackdropFilter: "blur(16px)",
@@ -34,7 +31,7 @@ export default function Header() {
         {/* logo text */}
         <Link
           href="/"
-          className="flex items-center shrink-0 text-white text-3xl font-semibold tracking-wide"
+          className="flex shrink-0 items-center text-base font-semibold tracking-wide text-white"
         >
           Codexon
         </Link>
@@ -61,29 +58,29 @@ export default function Header() {
 
         {/* mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-full md:hidden"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
         >
           <span
-            className="block w-5 h-0.5 rounded transition-all duration-200"
+            className="block h-0.5 w-5 rounded transition-all duration-200"
             style={{
-              background: "var(--color-text-muted)",
-              transform: menuOpen ? "translateY(6px) rotate(45deg)" : "none",
+              background: "#ffffff",
+              transform: menuOpen ? "translateY(8px) rotate(45deg)" : "none",
             }}
           />
           <span
-            className="block w-5 h-0.5 rounded transition-all duration-200"
+            className="block h-0.5 w-5 rounded transition-all duration-200"
             style={{
-              background: "var(--color-text-muted)",
+              background: "#ffffff",
               opacity: menuOpen ? 0 : 1,
             }}
           />
           <span
-            className="block w-5 h-0.5 rounded transition-all duration-200"
+            className="block h-0.5 w-5 rounded transition-all duration-200"
             style={{
-              background: "var(--color-text-muted)",
-              transform: menuOpen ? "translateY(-6px) rotate(-45deg)" : "none",
+              background: "#ffffff",
+              transform: menuOpen ? "translateY(-8px) rotate(-45deg)" : "none",
             }}
           />
         </button>
