@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Fonts ──────────────────────────────────────────── */
+@theme {
+  --font-sans: var(--font-raleway), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  /* ─── Background ────────────────────────────────────── */
+  --color-bg-base:        #0f0f0f;   /* primary page background */
+  --color-bg-surface:     #191919;   /* card / panel surface */
+  --color-bg-elevated:    #222222;   /* modals, dropdowns */
+
+  /* ─── Deep Navy Spectrum ────────────────────────────── */
+  --color-navy-950:       #0a1030;   /* darkest navy */
+  --color-navy-900:       #0a1e46;   /* deep navy */
+  --color-navy-800:       #1e1e46;   /* dark section bg */
+  --color-navy-750:       #1e1e5a;   /* dark navy blue */
+  --color-navy-700:       #1e326e;   /* blue section bg */
+  --color-navy-600:       #32326e;   /* mid navy */
+  --color-navy-500:       #303050;   /* muted navy */
+
+  /* ─── Blue / Indigo Accent Spectrum ─────────────────── */
+  --color-blue-700:       #464682;   /* medium indigo */
+  --color-blue-600:       #465a96;   /* medium blue */
+  --color-blue-500:       #465abe;   /* PRIMARY accent blue  ← main CTA */
+  --color-blue-400:       #5070b0;   /* hover state */
+  --color-blue-300:       #6e82aa;   /* steel blue */
+
+  /* ─── Muted Purple / Slate ──────────────────────────── */
+  --color-muted-700:      #5a5a6e;   /* darkest muted */
+  --color-muted-600:      #5a5a82;   /* muted purple-blue */
+  --color-muted-500:      #6e6e96;   /* mid purple */
+  --color-muted-400:      #8282aa;   /* light muted purple */
+  --color-muted-300:      #9696aa;   /* lightest muted */
+
+  /* ─── Text ──────────────────────────────────────────── */
+  --color-text-primary:   #ffffff;   /* headings */
+  --color-text-body:      #d0d0f0;   /* paragraph / body */
+  --color-text-muted:     #bebee6;   /* secondary text */
+  --color-text-subtle:    #8282aa;   /* captions, labels */
+  --color-text-disabled:  #5a5a82;   /* disabled / placeholder */
+
+  /* ─── Border ────────────────────────────────────────── */
+  --color-border-default: #303050;   /* default borders */
+  --color-border-subtle:  #1e1e46;   /* subtle dividers */
+  --color-border-accent:  #465abe;   /* focused / accent border */
+
+  /* ─── Gradients (as CSS-var strings for use in classes) */
+  --gradient-hero:        linear-gradient(135deg, #0f0f0f 0%, #0a1e46 60%, #1e326e 100%);
+  --gradient-section:     linear-gradient(180deg, #1e1e46 0%, #0f0f0f 100%);
+  --gradient-blue:        linear-gradient(135deg, #1e326e 0%, #465abe 100%);
+  --gradient-card:        linear-gradient(135deg, #1e1e46 0%, #32326e 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base styles ────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
