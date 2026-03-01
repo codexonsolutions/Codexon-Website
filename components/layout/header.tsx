@@ -46,12 +46,13 @@ export default function Header() {
           }`}
       >
         {/* logo icon */}
+        {/* logo icon */}
         <Link
           href="/"
-          className="inline-flex shrink-0 items-center h-9 gap-3 px-4 transition-all duration-500 hover:opacity-80 whitespace-nowrap"
+          className="inline-flex shrink-0 items-center h-9 gap-3 text-white/70 hover:text-white whitespace-nowrap mr-6"
         >
           <BrandLogo />
-          <span className="font-display text-[13px] font-bold tracking-wider uppercase leading-none text-white">CODEXON</span>
+          <span className="font-display text-[13px] font-bold tracking-wider uppercase leading-none">CODEXON</span>
         </Link>
 
         {/* desktop nav */}
@@ -62,8 +63,8 @@ export default function Header() {
               <Link
                 href={link.href}
                 className={`flex h-9 items-center px-4 text-[13px] font-display font-bold tracking-wider uppercase rounded-full transition-all duration-300 whitespace-nowrap ${isScrolled
-                    ? "text-white/70 hover:text-white hover:bg-white/5"
-                    : "text-white hover:text-white/80"
+                  ? "text-white/70 hover:text-white hover:bg-white/10"
+                  : "text-white/70 hover:text-white hover:bg-white/10"
                   } leading-none`}
               >
                 {link.label}
