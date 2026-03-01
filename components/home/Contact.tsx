@@ -5,7 +5,6 @@ export default function Contact() {
     <section id="contact" className="w-full bg-[#e9e9ec] py-16 md:py-24">
       <div className="mx-auto w-[80%]">
         <div className="max-w-[620px]">
-          <div className="mb-6 h-5 w-16 rounded-full bg-white/70" />
 
           <h2
             className="font-display text-[clamp(2rem,4vw,4rem)] font-semibold leading-[1.08] tracking-[-0.03em]"

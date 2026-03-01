@@ -17,8 +17,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Codexon Solutions",
-  description: "Crafting Future Software Today",
+  title: "Codexon | Tech Solutions Partner",
+  description: "Transforming Ideas Into Software Success Stories.",
 };
 
 export default function RootLayout({
