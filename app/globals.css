@@ -6,50 +6,42 @@
   --font-display: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   /* ─── Background ────────────────────────────────────── */
-  --color-bg-base:        #0f0f0f;   /* primary page background */
-  --color-bg-surface:     #191919;   /* card / panel surface */
-  --color-bg-elevated:    #222222;   /* modals, dropdowns */
+  --color-background: #0f0f0f;
+  /* primary page background */
+  --color-surface: #191919;
+  /* card / panel surface */
+  --color-elevated: #222222;
+  /* modals, dropdowns */
 
-  /* ─── Deep Navy Spectrum ────────────────────────────── */
-  --color-navy-950:       #0a1030;   /* darkest navy */
-  --color-navy-900:       #0a1e46;   /* deep navy */
-  --color-navy-800:       #1e1e46;   /* dark section bg */
-  --color-navy-750:       #1e1e5a;   /* dark navy blue */
-  --color-navy-700:       #1e326e;   /* blue section bg */
-  --color-navy-600:       #32326e;   /* mid navy */
-  --color-navy-500:       #303050;   /* muted navy */
-
-  /* ─── Blue / Indigo Accent Spectrum ─────────────────── */
-  --color-blue-700:       #464682;   /* medium indigo */
-  --color-blue-600:       #465a96;   /* medium blue */
-  --color-blue-500:       #465abe;   /* PRIMARY accent blue  ← main CTA */
-  --color-blue-400:       #5070b0;   /* hover state */
-  --color-blue-300:       #6e82aa;   /* steel blue */
-
-  /* ─── Muted Purple / Slate ──────────────────────────── */
-  --color-muted-700:      #5a5a6e;   /* darkest muted */
-  --color-muted-600:      #5a5a82;   /* muted purple-blue */
-  --color-muted-500:      #6e6e96;   /* mid purple */
-  --color-muted-400:      #8282aa;   /* light muted purple */
-  --color-muted-300:      #9696aa;   /* lightest muted */
+  /* ─── Primary ───────────────────────────────────────── */
+  --color-primary: #5371ff;
+  --color-primary-hover: #4660e6;
 
   /* ─── Text ──────────────────────────────────────────── */
-  --color-text-primary:   #ffffff;   /* headings */
-  --color-text-body:      #d0d0f0;   /* paragraph / body */
-  --color-text-muted:     #bebee6;   /* secondary text */
-  --color-text-subtle:    #8282aa;   /* captions, labels */
-  --color-text-disabled:  #5a5a82;   /* disabled / placeholder */
+  --color-text-primary: #ffffff;
+  /* headings */
+  --color-text-body: #d0d0f0;
+  /* paragraph / body */
+  --color-text-muted: #bebee6;
+  /* secondary text */
+  --color-text-subtle: #8282aa;
+  /* captions, labels */
+  --color-text-disabled: #5a5a82;
+  /* disabled / placeholder */
 
   /* ─── Border ────────────────────────────────────────── */
-  --color-border-default: #303050;   /* default borders */
-  --color-border-subtle:  #1e1e46;   /* subtle dividers */
-  --color-border-accent:  #465abe;   /* focused / accent border */
+  --color-border-default: #303050;
+  /* default borders */
+  --color-border-subtle: #1e1e46;
+  /* subtle dividers */
+  --color-border-accent: #5371ff;
+  /* focused / accent border */
 
   /* ─── Gradients (as CSS-var strings for use in classes) */
-  --gradient-hero:        linear-gradient(135deg, #0f0f0f 0%, #0a1e46 60%, #1e326e 100%);
-  --gradient-section:     linear-gradient(180deg, #1e1e46 0%, #0f0f0f 100%);
-  --gradient-blue:        linear-gradient(135deg, #1e326e 0%, #465abe 100%);
-  --gradient-card:        linear-gradient(135deg, #1e1e46 0%, #32326e 100%);
+  --gradient-hero: linear-gradient(135deg, #0f0f0f 0%, #0a1e46 60%, #1e326e 100%);
+  --gradient-section: linear-gradient(180deg, #1e1e46 0%, #0f0f0f 100%);
+  --gradient-blue: linear-gradient(135deg, #1e326e 0%, #5371ff 100%);
+  --gradient-card: linear-gradient(135deg, #1e1e46 0%, #32326e 100%);
 }
 
 /* ─── Base styles ────────────────────────────────────── */
@@ -75,7 +67,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   color: var(--color-text-primary);
   line-height: 1.15;

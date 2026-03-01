@@ -22,10 +22,10 @@ export default function Contact() {
           <div className="mt-9">
             <Link
               href="#contact"
-              className="inline-flex items-center gap-4 rounded-full bg-[#3f5bd8] py-2 pl-5 pr-2 text-[15px] font-medium text-white transition-colors duration-200 hover:bg-[#3650c3]"
+              className="inline-flex items-center gap-4 rounded-full bg-primary py-2 pl-5 pr-2 text-[15px] font-medium text-white transition-colors duration-200 hover:bg-primaryHover"
             >
               Let&apos;s Connect
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#3f5bd8]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary">
                 <svg width="17" height="17" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M3 8h10M9 4l4 4-4 4"

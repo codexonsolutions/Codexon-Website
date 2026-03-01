@@ -12,7 +12,7 @@ const dots = [
 
 export default function Featured() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-[var(--color-bg-base)]">
+    <section className="relative w-full min-h-screen overflow-hidden bg-background">
 
       {/* ambient glow */}
       <div
@@ -63,7 +63,7 @@ export default function Featured() {
                 className="inline-flex items-center gap-3 rounded-full border border-[#d9d9d9] bg-white py-2 pl-5 pr-2 text-[15px] font-medium leading-none tracking-[-0.01em] text-black"
               >
                 <span className="text-[#000000]">Let&apos;s Connect</span>
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#3f5bd8]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                   <svg
                     width="17"
                     height="17"

@@ -33,7 +33,7 @@ export default function Intro() {
                   We design and build high-performance web experiences that are fast, scalable, and easy to maintain.
                 </p>
                 <div className="mt-5 flex items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-[#6b4df2] text-white">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-primary text-white">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
@@ -43,13 +43,13 @@ export default function Intro() {
                       <path d="M3 12H21M12 3C14.5 5.4 14.5 18.6 12 21M12 3C9.5 5.4 9.5 18.6 12 21" stroke="currentColor" strokeWidth="1.8" />
                     </svg>
                   </span>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-white text-[#6b4df2]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-white text-primary">
                     <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect x="5.2" y="2.2" width="9.6" height="15.6" rx="2.2" stroke="currentColor" strokeWidth="1.8" />
                       <path d="M8.2 14.2H11.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
                     </svg>
                   </span>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-white text-[#6b4df2]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-[16px] bg-white text-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M7 18H18C20.7614 18 23 15.7614 23 13C23 10.3078 20.8752 8.11202 18.2099 8.00262C17.2395 5.66939 14.9408 4 12.25 4C8.76924 4 5.91484 6.77657 5.79012 10.2551C3.62462 10.6257 2 12.5128 2 14.75C2 17.2613 4.23871 19.5 6.75 19.5H7"
@@ -78,7 +78,7 @@ export default function Intro() {
             </div>
 
             <div className="flex items-center gap-5 rounded-[20px] bg-[#f2f2f3] px-6 py-6">
-              <span className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#ede8fb] text-[#6b4df2]">
+              <span className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#ede8fb] text-primary">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="10" cy="10" r="7.2" stroke="currentColor" strokeWidth="1.8" />
                   <path d="M10 6V10.4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -91,7 +91,7 @@ export default function Intro() {
             </div>
 
             <div className="flex items-center gap-5 rounded-[20px] bg-[#f2f2f3] px-6 py-6">
-              <span className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#ede8fb] text-[#6b4df2]">
+              <span className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#ede8fb] text-primary">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.2 9.2a2.2 2.2 0 1 0 0-4.4a2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" strokeWidth="1.8" />
                   <path d="M14.8 9.2a2.2 2.2 0 1 0 0-4.4a2.2 2.2 0 0 0 0 4.4Z" stroke="currentColor" strokeWidth="1.8" />

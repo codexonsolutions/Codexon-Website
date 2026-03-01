@@ -78,7 +78,7 @@ export default function Testimonials() {
       <div className="mx-auto w-[80%]">
         <div className="mx-auto flex w-fit items-center gap-2 rounded-full bg-[#f3f3f4] px-5 py-2 text-[14px] font-medium text-black">
           <span>Why Choose Us</span>
-          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ece6ff] text-[#6b4df2]">
+          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ece6ff] text-primary">
             <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 2.7L11.8 7L16.3 7.4L12.9 10.4L14 14.8L10 12.4L6 14.8L7.1 10.4L3.7 7.4L8.2 7L10 2.7Z" fill="currentColor" />
             </svg>
@@ -97,7 +97,7 @@ export default function Testimonials() {
         <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((item) => (
             <article key={item.name} className="rounded-2xl bg-[#f3f3f4] p-6">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#6b4df2] text-white">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-white">
                 <QuoteIcon />
               </span>
               <h3 className="mt-4 text-[28px] font-semibold leading-[1.2]" style={{ color: "#000000" }}>

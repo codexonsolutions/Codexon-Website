@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[#5d37f1] to-[#7650ff]">
+      <div className="bg-secondary">
         <div className="mx-auto flex w-[80%] flex-col gap-4 py-4 text-[15px] text-white/95 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2024 Codexon. All rights reserved.</p>
           <div className="flex items-center gap-7">
