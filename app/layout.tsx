@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -19,11 +19,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Codexon Solutions",
   description: "Crafting Future Software Today",
-  icons: {
-    icon: "/Codexon-Logo.svg",
-    shortcut: "/Codexon-Logo.svg",
-    apple: "/Codexon-Logo.svg",
-  },
 };
 
 export default function RootLayout({

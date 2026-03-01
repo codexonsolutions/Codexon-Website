@@ -1,10 +1,10 @@
-import Featured from "@/components/home/Featured";
-import Intro from "@/components/home/Intro";
+import Featured from "@/components/home/featured";
+import Intro from "@/components/home/intro";
 import WhatWeDo from "@/components/home/whatwedo";
-import AgileProcess from "@/components/home/AgileProcess";
-import Testimonials from "@/components/home/Testimonials";
-import CaseStudies from "@/components/home/CaseStudies";
-import Contact from "@/components/home/Contact";
+import AgileProcess from "@/components/home/agileProcess";
+import Testimonials from "@/components/home/testimonials";
+import CaseStudies from "@/components/home/caseStudies";
+import Contact from "@/components/home/contact";
 
 export default function Home() {
   return (
