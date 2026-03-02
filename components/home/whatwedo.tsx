@@ -1,6 +1,10 @@
+"use client";
+
+import { motion, type Variants } from "framer-motion";
+
 const services = [
   {
-    title: "Talent Augmentation",
+    title: "Talent\nAugmentation",
     description:
       "Add vetted engineers, designers, and QA specialists to your team in days so delivery stays on schedule without long hiring cycles.",
     icon: (
@@ -10,7 +14,7 @@ const services = [
     ),
   },
   {
-    title: "Product Engineering",
+    title: "Product\nEngineering",
     description:
       "From architecture to launch, we build reliable web and mobile products with clean code, measurable quality, and room to scale.",
     icon: (
@@ -21,7 +25,7 @@ const services = [
     ),
   },
   {
-    title: "Startup Services",
+    title: "Startup\nServices",
     description:
       "Validate faster with MVP strategy, rapid prototyping, and iterative releases that turn early feedback into product traction.",
     icon: (
@@ -32,7 +36,7 @@ const services = [
     ),
   },
   {
-    title: "Technology Consulting",
+    title: "Technology\nConsulting",
     description:
       "Get clear technical direction on architecture, cloud, security, and modernization so every engineering decision supports business goals.",
     icon: (
@@ -44,36 +48,85 @@ const services = [
   },
 ];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="w-full bg-[#e9e9ec] pb-20 pt-10 md:pb-24 md:pt-14">
+    <section id="what-we-do" className="w-full bg-[#e9e9ec] pb-20 pt-10 md:pb-24 md:pt-14 font-sans">
       <div className="mx-auto w-[80%]">
-        <div className="mx-auto flex w-fit items-center gap-2 rounded-full bg-[#f3f3f4] px-5 py-2 text-[14px] font-medium text-[#1b1b1b]">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mx-auto flex w-fit items-center gap-2 rounded-full bg-[#f3f3f4] px-5 py-2 text-[14px] font-medium text-[#1b1b1b]"
+        >
           <span>What We Do</span>
           <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ece6ff] text-[#6b4df2]">
             <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 2.7L11.8 7L16.3 7.4L12.9 10.4L14 14.8L10 12.4L6 14.8L7.1 10.4L3.7 7.4L8.2 7L10 2.7Z" fill="currentColor" />
             </svg>
           </span>
-        </div>
+        </motion.div>
 
-        <h2 className="mx-auto mt-8 max-w-[28ch] text-center font-display text-[clamp(1.9rem,4.1vw,4rem)] font-semibold leading-[1.15] tracking-[-0.03em] !text-black">
+        <motion.h2
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mt-8 max-w-[28ch] text-center font-display text-[clamp(1.9rem,4.1vw,4rem)] font-semibold leading-[1.15] tracking-[-0.03em] !text-black"
+        >
           With Codexon, You perform better.
           <br className="hidden md:block" />
-          <span className="md:inline">Always! It is our guarantee!</span>
-        </h2>
+          <span className="md:inline"> Always! It is our guarantee!</span>
+        </motion.h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4"
+        >
           {services.map((service) => (
-            <article key={service.title} className="rounded-2xl bg-[#f1f1f2] p-6">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ece9f8] text-[#6b4df2]">
+            <motion.article
+              key={service.title}
+              variants={cardVariants}
+              whileHover={{ y: -5, backgroundColor: "#ffffff", boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.05)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              className="rounded-2xl bg-[#f1f1f2] p-6 group cursor-pointer"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ece9f8] text-[#6b4df2] transition-colors group-hover:bg-primary group-hover:text-white">
                 {service.icon}
               </span>
-              <h3 className="mt-5 text-[26px] font-semibold leading-[1.2] !text-black">{service.title}</h3>
-              <p className="mt-3 text-[13px] leading-[1.5] text-[#676d78]">{service.description}</p>
-            </article>
+              <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] !text-black whitespace-pre-line">
+                {service.title}
+              </h3>
+              <p className="mt-4 text-[14px] leading-[1.6] text-[#676d78] font-sans">
+                {service.description}
+              </p>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

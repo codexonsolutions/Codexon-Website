@@ -34,34 +34,7 @@ const testimonials: Testimonial[] = [
       "We needed a reliable MVP with room to scale. Codexon helped us prioritize features, met every milestone, and stayed responsive throughout the whole project.",
     avatar: "AJ",
     avatarBg: "from-[#3f7dff] to-[#2ab7ff]",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Operations Manager, Elevation Studio",
-    headline: "Excellent Collaboration Across Time Zones",
-    review:
-      "Communication was excellent across time zones, and the final web app matched our design standards. Their QA process was one of the strongest we have worked with.",
-    avatar: "ER",
-    avatarBg: "from-[#ff7b7b] to-[#ffb26b]",
-  },
-  {
-    name: "Daniel Rossi",
-    role: "CTO, Swift Web Solutions",
-    headline: "Legacy Modernization Without Disruption",
-    review:
-      "Codexon modernized our legacy modules without disrupting active clients. Performance improved right away, and the codebase is now much easier for our team to maintain.",
-    avatar: "DR",
-    avatarBg: "from-[#00a56a] to-[#36cf8c]",
-  },
-  {
-    name: "Sophie Laurent",
-    role: "Co-Founder, Vision Atelier",
-    headline: "Structured Execution From Kickoff to Launch",
-    review:
-      "From kickoff to delivery, the process felt structured and professional. They translated business goals into practical technical decisions and delivered on schedule.",
-    avatar: "SL",
-    avatarBg: "from-[#5a68ff] to-[#57a8ff]",
-  },
+  }
 ];
 
 function QuoteIcon() {
