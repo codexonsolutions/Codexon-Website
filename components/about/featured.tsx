@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 export default function AboutFeatured() {
   return (
-    <section className="w-full bg-primary/10 pt-32 pb-10 md:pt-40 md:pb-14">
-      <div className="mx-auto w-[88%] max-w-7xl">
+    <section className="w-full h-screen bg-primary/10 pt-32 pb-10 md:pt-40 md:pb-14">
+      <div className="mx-auto w-[85%] max-w-8xl">
         <div className="text-center">
           <h1 className="font-display text-4xl font-extrabold !text-black sm:text-6xl">
             About Us
@@ -21,9 +21,9 @@ export default function AboutFeatured() {
           />
         </div>
 
-        <div className="mt-12 grid items-center gap-10 md:mt-16 md:grid-cols-2">
+        <div className="mt-12 grid items-center gap-10 md:mt-16 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
           <div>
-            <p className="max-w-[620px] text-2xl font-semibold leading-[1.35] text-black sm:text-3xl md:text-[39px]">
+            <p className="text-2xl font-semibold leading-[1.35] text-black sm:text-3xl md:text-[36px]">
               We are a multi-award-winning digital consulting and engineering
               firm that provides end-to-end software solutions to enterprises.
             </p>
@@ -50,10 +50,9 @@ export default function AboutFeatured() {
             <Image
               src="/images/aboutHero1.png"
               alt="About us hero illustration"
-              width={620}
-              height={380}
-              priority
-              className="h-auto w-full max-w-[620px] object-contain"
+              width={820}
+              height={580}
+              className="h-auto w-full max-w-none object-contain md:w-[110%]"
             />
           </div>
         </div>
