@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "About Us", href: "/about" },
@@ -23,6 +24,8 @@ function BrandLogo() {
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const useScrolledHeader = isScrolled || pathname === "/about";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,13 +37,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled
+      className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${useScrolledHeader
         ? "top-6 w-[92%] md:w-auto"
         : "top-0 w-full"
         }`}
     >
       <nav
-        className={`mx-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled
+        className={`mx-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] ${useScrolledHeader
           ? "max-w-[800px] rounded-full bg-black/40 backdrop-blur-xl border border-white/10 px-6 py-2 shadow-2xl shadow-black/50"
           : "max-w-7xl w-[80%] rounded-none bg-transparent border-transparent px-0 py-8 md:px-0 md:py-10"
           }`}
@@ -56,13 +59,13 @@ export default function Header() {
         </Link>
 
         {/* desktop nav */}
-        <ul className={`hidden md:flex items-center transition-all duration-700 whitespace-nowrap ${isScrolled ? "gap-2" : "gap-8"
+        <ul className={`hidden md:flex items-center transition-all duration-700 whitespace-nowrap ${useScrolledHeader ? "gap-2" : "gap-8"
           }`}>
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
-                className={`flex h-9 items-center px-4 text-[13px] font-display font-bold tracking-wider uppercase rounded-full transition-all duration-300 whitespace-nowrap ${isScrolled
+                className={`flex h-9 items-center px-4 text-[13px] font-display font-bold tracking-wider uppercase rounded-full transition-all duration-300 whitespace-nowrap ${useScrolledHeader
                   ? "text-white/70 hover:text-white hover:bg-white/10"
                   : "text-white/70 hover:text-white hover:bg-white/10"
                   } leading-none`}
@@ -75,7 +78,7 @@ export default function Header() {
 
         {/* mobile hamburger */}
         <button
-          className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full md:hidden transition-all duration-500 ${isScrolled ? "bg-white/5" : "bg-transparent"
+          className={`flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full md:hidden transition-all duration-500 ${useScrolledHeader ? "bg-white/5" : "bg-transparent"
             }`}
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
@@ -122,4 +125,3 @@ export default function Header() {
     </header>
   );
 }
-
