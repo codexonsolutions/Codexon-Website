@@ -1,12 +1,15 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/private/',
-        },
-        sitemap: 'https://codexonsolutions.com/sitemap.xml',
-    };
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: '/private/',
+    },
+    sitemap: 'https://codexonsolutions.com/sitemap.xml',
+  };
 }
