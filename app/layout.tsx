@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   },
   description: "Transforming Ideas Into Software Success Stories. Specialized in mobile, web, and cloud solutions.",
   keywords: ["software development", "tech solutions", "web development", "mobile apps", "cloud computing"],
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   robots: {
     index: true,
     follow: true,
